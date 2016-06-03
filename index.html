@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <partial-view></partial-view>
+    <script src="HttpService.js"></script>
+    <script src="Router.js"></script>
+    <script>
+        
+        var router = new Router(history, new HttpService(), document.querySelector('partial-view'), window.location);
+        router.addRoute(new Route('/', 'main.html'));
+        router.addRoute(new Route('/contact', 'contact.html'));
+        router.go();
+    </script>
+</body>
+</html>
